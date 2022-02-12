@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow: /assets/
+Sitemap: https://usman-kashmiri.github.io/Kashmiri.Dev-2.0/sitemap.xml
