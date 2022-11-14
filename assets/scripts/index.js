@@ -30,27 +30,27 @@ $(document).ready(function() {
 
     if (checkBox.checked) {
         $('body').addClass('dark');
-        $('section.home').addClass('dark-bg').removeClass('light-bg');
-        $('img#lightimg').hide();
-        $('#darkimg').show();
+        $('.home-layer').addClass('dark-bg').removeClass('light-bg');
+        // $('img#lightimg').hide();
+        // $('#darkimg').show();
         $('.alert').hide();
     } else {
         $('body').removeClass('dark');
-        $('section.home').addClass('light-bg').removeClass('dark-bg');
-        $('img#darkimg').hide();
-        $('#lightimg').show();
+        $('.home-layer').addClass('light-bg').removeClass('dark-bg');
+        // $('img#darkimg').hide();
+        // $('#lightimg').show();
         $(".alert").hide().delay(5000).fadeIn();
     }
 
     $('#chk').click(function() {
         if (checkBox.checked) {
-            $('section.home').addClass('dark-bg').removeClass('light-bg');
-            $('img#lightimg').hide();
-            $('#darkimg').show();
+            $('.home-layer').addClass('dark-bg').removeClass('light-bg');
+            // $('img#lightimg').hide();
+            // $('#darkimg').show();
         } else {
-            $('section.home').addClass('light-bg').removeClass('dark-bg');
-            $('img#darkimg').hide();
-            $('#lightimg').show();
+            $('.home-layer').addClass('light-bg').removeClass('dark-bg');
+            // $('img#darkimg').hide();
+            // $('#lightimg').show();
         }
     });
 
@@ -68,18 +68,18 @@ $(document).ready(function() {
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Frontend Developer", "Designer"],
+        strings: ["Website Design", "Web Development", "Video Editing", "Content Writing", "Social Media Marketing", "SEO", "Social Media Accounts Managment"],
         typeSpeed: 100,
         backSpeed: 40,
         loop: true
     });
 
-    var typed = new Typed(".typing-2", {
-        strings: ["Frontend Developer", "Designer"],
-        typeSpeed: 100,
-        backSpeed: 40,
-        loop: true
-    });
+    // var typed = new Typed(".typing-2", {
+    //     strings: ["Frontend Developer", "Designer"],
+    //     typeSpeed: 100,
+    //     backSpeed: 40,
+    //     loop: true
+    // });
 
     // owl carousel script
     $('.carousel').owlCarousel({
@@ -134,23 +134,23 @@ $(document).ready(function() {
     });
 
     // Messenger Chat Integration
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "593965871093444");
-    chatbox.setAttribute("attribution", "biz_inbox");
+    // var chatbox = document.getElementById('fb-customer-chat');
+    // chatbox.setAttribute("page_id", "593965871093444");
+    // chatbox.setAttribute("attribution", "biz_inbox");
 
-    window.fbAsyncInit = function() {
-        FB.init({
-            xfbml: true,
-            version: 'v11.0'
-        });
-    };
+    // window.fbAsyncInit = function() {
+    //     FB.init({
+    //         xfbml: true,
+    //         version: 'v11.0'
+    //     });
+    // };
 
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+    // (function(d, s, id) {
+    //     var js, fjs = d.getElementsByTagName(s)[0];
+    //     if (d.getElementById(id)) return;
+    //     js = d.createElement(s);
+    //     js.id = id;
+    //     js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    //     fjs.parentNode.insertBefore(js, fjs);
+    // }(document, 'script', 'facebook-jssdk'));
 });
