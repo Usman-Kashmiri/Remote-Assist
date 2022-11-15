@@ -74,39 +74,6 @@ $(document).ready(function() {
         loop: true
     });
 
-    // var typed = new Typed(".typing-2", {
-    //     strings: ["Frontend Developer", "Designer"],
-    //     typeSpeed: 100,
-    //     backSpeed: 40,
-    //     loop: true
-    // });
-
-    // owl carousel script
-    $('.carousel').owlCarousel({
-        margin: 30,
-        loop: true,
-        autoplay: true,
-        autoplayTimeOut: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: false
-            },
-            600: {
-                items: 2,
-                nav: false
-            },
-            1000: {
-                items: 3,
-                nav: false
-            },
-            1500: {
-                margin: 60,
-            }
-        }
-    });
-
     // GSAP animation
     gsap.registerPlugin(ScrollTrigger);
 
@@ -121,18 +88,46 @@ $(document).ready(function() {
     tl.from('.col-left', { opacity: 0, duration: 0.8, x: -100 })
     tl.from('.col-right', { opacity: 0, duration: 0.5, x: 100 })
 
-    // For Skills progress bars
-    gsap.from('.line', {
+    // var tl2 = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: ".services",
+    //         pin: false,
+    //         start: "top center"
+    //     }
+    // })
+
+    gsap.from('.services .card', {
         scrollTrigger: {
-            trigger: ".bars",
-            start: "top center"
+            trigger: ".card",
+            start: "top bottom"
         },
         opacity: 0,
-        duration: 0.8,
-        x: -100,
+        duration: 0.5,
+        y: 50,
         stagger: 0.2
     });
 
+
+    var tl2 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".member1",
+            pin: false,
+            start: "top center"
+        }
+    })
+    var tl3 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".member2",
+            pin: false,
+            start: "top center"
+        }
+    })
+    tl2.from('.member1 .img-container', { opacity: 0, duration: 0.5, x: -100 })
+    tl3.from('.member2 .img-container', { opacity: 0, duration: 0.5, x: 100 })
+    tl2.from('.member1 .description', { opacity: 0, duration: 0.5, x: 100 })
+    tl3.from('.member2 .description', { opacity: 0, duration: 0.5, x: -100 })
+
+    
     // Messenger Chat Integration
     // var chatbox = document.getElementById('fb-customer-chat');
     // chatbox.setAttribute("page_id", "593965871093444");
