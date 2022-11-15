@@ -31,26 +31,18 @@ $(document).ready(function() {
     if (checkBox.checked) {
         $('body').addClass('dark');
         $('.home-layer').addClass('dark-bg').removeClass('light-bg');
-        // $('img#lightimg').hide();
-        // $('#darkimg').show();
         $('.alert').hide();
     } else {
         $('body').removeClass('dark');
         $('.home-layer').addClass('light-bg').removeClass('dark-bg');
-        // $('img#darkimg').hide();
-        // $('#lightimg').show();
         $(".alert").hide().delay(5000).fadeIn();
     }
 
     $('#chk').click(function() {
         if (checkBox.checked) {
             $('.home-layer').addClass('dark-bg').removeClass('light-bg');
-            // $('img#lightimg').hide();
-            // $('#darkimg').show();
         } else {
             $('.home-layer').addClass('light-bg').removeClass('dark-bg');
-            // $('img#darkimg').hide();
-            // $('#lightimg').show();
         }
     });
 
@@ -88,14 +80,6 @@ $(document).ready(function() {
     tl.from('.col-left', { opacity: 0, duration: 0.8, x: -100 })
     tl.from('.col-right', { opacity: 0, duration: 0.5, x: 100 })
 
-    // var tl2 = gsap.timeline({
-    //     scrollTrigger: {
-    //         trigger: ".services",
-    //         pin: false,
-    //         start: "top center"
-    //     }
-    // })
-
     gsap.from('.services .card', {
         scrollTrigger: {
             trigger: ".card",
@@ -126,26 +110,7 @@ $(document).ready(function() {
     tl3.from('.member2 .img-container', { opacity: 0, duration: 0.5, x: 100 })
     tl2.from('.member1 .description', { opacity: 0, duration: 0.5, x: 100 })
     tl3.from('.member2 .description', { opacity: 0, duration: 0.5, x: -100 })
+    tl2.from('.member1 .links', { opacity: 0, duration: 0.8, y: 50 })
+    tl3.from('.member2 .links', { opacity: 0, duration: 0.8, y: 50 })
 
-    
-    // Messenger Chat Integration
-    // var chatbox = document.getElementById('fb-customer-chat');
-    // chatbox.setAttribute("page_id", "593965871093444");
-    // chatbox.setAttribute("attribution", "biz_inbox");
-
-    // window.fbAsyncInit = function() {
-    //     FB.init({
-    //         xfbml: true,
-    //         version: 'v11.0'
-    //     });
-    // };
-
-    // (function(d, s, id) {
-    //     var js, fjs = d.getElementsByTagName(s)[0];
-    //     if (d.getElementById(id)) return;
-    //     js = d.createElement(s);
-    //     js.id = id;
-    //     js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-    //     fjs.parentNode.insertBefore(js, fjs);
-    // }(document, 'script', 'facebook-jssdk'));
 });
