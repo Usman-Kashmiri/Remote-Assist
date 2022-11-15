@@ -319,8 +319,11 @@ section .title::after {
 }
 
 .logo a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     color: var(--White);
     cursor: pointer;
 }
@@ -548,6 +551,10 @@ section.home {
 
 .services .serv-content .card {
     width: calc(33% - 20px);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: #111;
     text-align: center;
     border-radius: 6px;
@@ -1010,9 +1017,6 @@ footer span a:hover {
 }
 
 @media (max-width: 1080px) {
-    .logo a {
-        font-size: 34px;
-    }
     .nav-bar-container {
         position: relative;
         right: 30px;
@@ -1032,18 +1036,12 @@ footer span a:hover {
     .text-2 {
         font-size: 60px;
     }
-    #third-box {
-        display: inline-block;
-    }
     .work .carousel .card img {
         width: 118%;
     }
 }
 
-@media (max-width: 770px) {
-    .logo a {
-        font-size: 44px;
-    }
+@media (max-width: 900px) {
     .dark-mode {
         top: 20px;
     }
@@ -1244,13 +1242,8 @@ footer span a:hover {
         width: 100%;
     }
     .services .serv-content .card {
-        width: calc(50% - 10px);
+        width: 45%;
         /* margin-bottom: 20px; */
-    }
-    #third-box {
-        display: block;
-        position: relative;
-        left: 25%;
     }
     .skills .skills-content .column,
     .contact .contact-content .column {
@@ -1274,9 +1267,6 @@ footer span a:hover {
     }
     .services .serv-content .card {
         width: 100%;
-    }
-    #third-box {
-        left: 0;
     }
 }
 
@@ -1310,17 +1300,17 @@ footer span a:hover {
 
 @media (max-width: 540px) {
     .logo a {
-        font-size: 36px;
+        font-size: 25px;
     }
     .menu-btn {
-        top: 15px;
+        top: 20px;
         left: 60%;
     }
     .menu.active {
         margin-top: 56px;
     }
     .dark-mode {
-        top: 15px;
+        top: 20px;
     }
     .home {
         background-position-x: 93%;
